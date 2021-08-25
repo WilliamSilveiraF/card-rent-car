@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root {
+    --laranja-brilhante: hsl(31, 77%, 52%);
+    --ciano-dark: hsl(184, 100%, 22%);
+    --ciano-dark-escuro: hsl(179, 100%, 13%);
+
+    --branco-transparente: hsla(0, 0%, 100%, 0.75);
+    --cinza-claro: hsl(0, 0%, 95%);
+}
+
+html {
+    background-color: var(--cinza-claro);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    width: 1000px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+}
+.sedans, .suvs, .luxo {
+    width: 500px;
+    height: 480px;
+    padding: 80px 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.sedans > img, .suvs > img, .luxo > img {
+    width: fit-content;
+}
+.sedans > h1, .suvs > h1, .luxo > h1 {
+    font: 2.5rem 'Big Shoulders Display', cursive;
+    color: white;
+    margin-top: 25px;
+}
+.sedans > p, .suvs > p, .luxo > p {
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--branco-transparente);
+    margin-top: 10px;
+}
+.sedans {
+    background: var(--laranja-brilhante);
+    border-radius: 20px 0px 0px 20px;
+}
+.suvs{
+    background: var(--ciano-dark);
+}
+.luxo {
+    background: var(--ciano-dark-escuro);
+    border-radius: 0px 20px 20px 0px;
+}
+.sedansBtn, .suvsBtn, .luxoBtn {
+    padding: 15px 50px;
+    width: fit-content;
+    background: white;
+    border: none;
+    border-radius: 50px;
+    font: 'Lexend Deca', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: auto;
+}
+.sedansBtn {
+    color: var(--laranja-brilhante);
+}
+.suvsBtn {
+    color: var(--ciano-dark);
+}
+.luxoBtn {
+    color: var(--ciano-dark-escuro);
+}
+.sedansBtn:active, .suvsBtn:active, .luxoBtn:active {
+    color: white;
+    box-shadow: 0px 0px 0px 2px #fff inset;
+}
+.sedansBtn:active {
+    background:inherit;
+}
+.suvsBtn:active {
+    background:inherit;
+}
+.luxoBtn:active {
+    background: inherit;
+}
+
+@media (max-width: 1000px) {
+    .sedans, .suvs, .luxo {
+        padding: 20px;
+        width: 350px;
+        height: 300px;
+    }
+    .sedans > h1, .suvs > h1, .luxo > h1 {
+        font-size: 2rem;
+        margin-top: 5px;
+    }
+    .sedans {
+        border-radius: 20px 20px 0px 0px;
+    }
+    .luxo {
+        border-radius: 0px 0px 20px 20px;
+    }
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+}
